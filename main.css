@@ -6,6 +6,18 @@
     --light: #EEE;
     --pink: #EC4899;
     --purple: #8B5Cf6;
+
+    --dad: #48f542;
+    --dad-glow: 0px 0px 4px rgba(72, 245, 66, 0.75);
+
+    --mom: #6c42f5;
+    --mom-glow: 0px 0px 4px rgba(108, 66, 245, 0.75);
+
+    --aly: #e874e4;
+    --aly-glow: 0px 0px 4px rgba(232, 116, 228,0.75);
+    
+    --jason: #75bcd1;
+    --jason-glow: 0px 0px 4px rgba(117, 188, 209,0.75);
 }
 
 * {
@@ -34,6 +46,91 @@ header h1{
     font-weight: 300;
     color: var(--gray);
     margin-bottom: 1rem;
+}
+
+/* Select Users */
+h4{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--light);
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    margin-bottom:1.5rem;
+}
+
+.options label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--darker);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--mom);
+    box-shadow: var(--mom-glow);
+}
+
+.bubble.Dad {
+    border-color: var(--dad);
+    box-shadow: var(--dad-glow);
+}
+
+.bubble.Aly {
+    border-color: var(--aly);
+    box-shadow: var(--aly-glow);
+}
+
+.bubble.Jason {
+    border-color: var(--jason);
+    box-shadow: var(--jasonS-glow);
+}
+
+.bubble::after {
+    content:"";
+    display: block;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    background-color: var(--mom);
+    box-shadow: var(--mom-glow);
+    border-radius: 50%;
+    transition: 0.2 ease-in-out;
+}
+
+.bubble.Dad::after {
+    background-color: var(--dad);
+    box-shadow: var(--dad-glow);
+}
+
+.bubble.Aly::after {
+    background-color: var(--aly);
+    box-shadow: var(--aly-glow);
+}
+
+.bubble.Jason::after {
+    background-color: var(--jason);
+    box-shadow: var(--jason-glow);
+}
+
+input:checked ~ .bubble::After {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
 }
 
 #new-task-form {
