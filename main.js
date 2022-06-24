@@ -40,8 +40,13 @@ window.addEventListener('load', () => {
         task_delete_el.classList.add("delete");
         task_delete_el.innerHTML = "Delete";
 
+        const task_done_el = document.createElement("checkbox");
+        task_done_el.classList.add("done");
+
+
         task_actions_el.appendChild(task_edit_el);
         task_actions_el.appendChild(task_delete_el);
+        task_actions_el.appendChild(task_done_el);
 
         task_el.appendChild(task_actions_el);
 
