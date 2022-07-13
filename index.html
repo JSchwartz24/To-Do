@@ -13,58 +13,62 @@
         <h1>To Do List</h1>
 
         <h4>Select User</h4>
-        <div class="options">
-            <label>
-                <input 
-                    type="radio" 
-                    name="category" 
-                    id="category1" 
-                    value="Mom"/>
-                    <span class="bubble Mom"></span>
-                    <div>Mom</div>
-            </label>
-
-            <label>
-                <input 
-                    type="radio" 
-                    name="category" 
-                    id="category2" 
-                    value="Dad"/>
-                    <span class="bubble Dad"></span>
-                    <div>Dad</div>
-            </label>
-
-            <label>
-                <input 
-                    type="radio" 
-                    name="category" 
-                    id="category3" 
-                    value="Jason"/>
-                    <span class="bubble Jason"></span>
-                    <div>Jason</div>
-            </label>
-
-            <label>
-                <input 
-                    type="radio" 
-                    name="category" 
-                    id="category4" 
-                    value="Aly"/>
-                    <span class="bubble Aly"></span>
-                    <div>Aly</div>
-            </label>
-        </div>
 
         <form id="new-task-form">
-            <input
-                type="text"
-                name="new-task-input"
-                id="new-task-input"
-                placeholder="  What do you have planned?" />
-            <input
-                type="submit"
-                id="new-task-submit"
-                value="Add task" />
+            
+            <div class="options">
+                <label>
+                    <input 
+                        type="radio" 
+                        name="category" 
+                        id="category1" 
+                        value="Mom"/>
+                        <span class="bubble Mom"></span>
+                        <div>Mom</div>
+                </label>
+
+                <label>
+                    <input 
+                        type="radio" 
+                        name="category" 
+                        id="category2" 
+                        value="Dad"/>
+                        <span class="bubble Dad"></span>
+                        <div>Dad</div>
+                </label>
+
+                <label>
+                    <input 
+                        type="radio" 
+                        name="category" 
+                        id="category3" 
+                        value="Jason"/>
+                        <span class="bubble Jason"></span>
+                        <div>Jason</div>
+                </label>
+
+                <label>
+                    <input 
+                        type="radio" 
+                        name="category" 
+                        id="category4" 
+                        value="Aly"/>
+                        <span class="bubble Aly"></span>
+                        <div>Aly</div>
+                </label>
+            </div>
+
+            <div class="data">
+                <input
+                    type="text"
+                    name="content"  
+                    id="new-task-input"
+                    placeholder="  What do you have planned?" /><!-- name="new-task-input" -->
+                <input
+                    type="submit"
+                    id="new-task-submit"
+                    value="Add task" />
+            </div>    
 
         </form>
     </header>
@@ -98,6 +102,6 @@
         </section>
     </main>
 
-    <script src="main.js"></script>
+    <script src="main2.js"></script>
 </body>
 </html>

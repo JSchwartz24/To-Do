@@ -133,7 +133,7 @@ input:checked ~ .bubble::After {
     opacity: 1;
 }
 
-#new-task-form {
+#new-task-form .data{
     display: flex;
 }
 
